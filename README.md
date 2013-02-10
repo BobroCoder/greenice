@@ -1,4 +1,0 @@
-greenice
-========
-
-Yii Test
