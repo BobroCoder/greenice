@@ -15,7 +15,7 @@ class ProductsController extends CController
         {
             return array(
                 array('deny',
-                    'actions'=>array('index', 'all', 'create'),
+                    'actions'=>array('index', 'all', 'create', 'delete', 'edit'),
                     'users'=>array('?'),
                 ),
             );
@@ -60,7 +60,7 @@ class ProductsController extends CController
             
             $model=new Products;
                 
-            if (isset($_POST['ajax']) && $_POST['ajax'] === 'create-product-form') {
+            if (isset($_POST['ajax']) && $_POST['ajax'] === 'product-form') {
                 echo CActiveForm::validate($model);
                 Yii::app()->end();
             }
@@ -82,10 +82,24 @@ class ProductsController extends CController
             $this->render('form_product',array('model'=>$model));
         }
         
-        public function actionDelete(){
+        public function actionEdit(){
+            $model=new Products;
+            $product_error=NULL;    
             
-            if (isset($_GET['pid'])){
-                $product_delete_error=NULL;
+            if (isset($_POST['ajax']) && $_POST['ajax'] === 'product-form') {
+                echo CActiveForm::validate($model);
+                Yii::app()->end();
+            }
+            
+            if (isset($_POST['Products'])){
+                
+                $product=Products::model()->findByPk((int)$_POST['Products']['id']);
+                $product->attributes=$_POST['Products'];
+                if ($product->update()){
+                    $this->redirect('/products');
+                    Yii::app()->end();
+                }
+            }else{
                 $product= Products::model()->findByPk((int)$_GET['pid']);
                 
                 /*
@@ -93,27 +107,56 @@ class ProductsController extends CController
                  */
                 
                 if ($product==NULL){
-                    $product_delete_error='Product with ID='.(int)$_GET['pid'].' does not exist!';
+                    $product_error='Product with ID='.(int)$_GET['pid'].' does not exist!';
                 }
                 if ($product->owner_id!=Yii::app()->user->getId()){
-                    $product_delete_error='Product with ID='.(int)$_GET['pid'].' does not belong to you!';
+                    $product_error='Product with ID='.(int)$_GET['pid'].' does not belong to you!';
+                }            
+                if ($product_error!=NULL){
+                    $this->layout='small_window';
+                    $this->pageTitle='Edit Product';
+                    $this->render('product_error',array('product_error'=>$product_error));
+                }else{
+
+                    $this->layout='small_window';
+                    $this->pageTitle='Edit Product';
+                    
+                    $model->name=$product->name;
+                    $model->price=  substr($product->price,1);
+                    $model->quantity=$product->quantity;
+                    $model->id=$product->id;
+                    $this->render('form_product',array('model'=>$model));
+                }
+            }
+            
+        }
+        
+        public function actionDelete(){
+            
+            if (isset($_GET['pid'])){
+                $product_error=NULL;
+                $product= Products::model()->findByPk((int)$_GET['pid']);
+                
+                /*
+                 * @todo Migrate to Yii Errors engine
+                 */
+                
+                if ($product==NULL){
+                    $product_error='Product with ID='.(int)$_GET['pid'].' does not exist!';
+                }
+                if ($product->owner_id!=Yii::app()->user->getId()){
+                    $product_error='Product with ID='.(int)$_GET['pid'].' does not belong to you!';
                 }
                 
-                if ($product_delete_error!=NULL){
+                if ($product_error!=NULL){
                     $this->layout='small_window';
                     $this->pageTitle='Delete Product';
-                    $this->render('product_delete_error',array('product_delete_error'=>$product_delete_error));
+                    $this->render('product_error',array('product_error'=>$product_error));
                 }else{
-                    
                     if($product->delete()) $this->redirect ('/products');
-                    
                 }
-                
-                
-                
             }else{
                 $this->redirect('/products');
             }
-            
         }
 }

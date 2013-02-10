@@ -1,5 +1,5 @@
 <?php $form=$this->beginWidget('CActiveForm', array(
-	'id'=>'create-product-form',
+	'id'=>'product-form',
 	'enableAjaxValidation' => true,
         'clientOptions' => array(
             'validateOnSubmit' => true,
@@ -25,6 +25,7 @@
             <?php echo $form->error($model,'quantity'); ?></td>
     </tr>
     <tr>
+        <?php echo $form->hiddenField($model,'id'); ?>
         <td colspan="2" class="hcenter"><?php echo CHtml::submitButton('Submit'); ?> </td>
     </tr>
     
