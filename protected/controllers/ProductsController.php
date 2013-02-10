@@ -3,12 +3,25 @@
 class ProductsController extends CController
 {
 	public $layout='big_window';
+        
+        public function filters()
+        {
+            return array(
+                'accessControl',
+            );
+        }
 
+        public function accessRules()
+        {
+            return array(
+                array('deny',
+                    'actions'=>array('index', 'all', 'create'),
+                    'users'=>array('?'),
+                ),
+            );
+        }
+        
         public function actionIndex(){
-            
-            if (Yii::app()->user->GetId()==NULL){
-                $this->redirect('/profile/login');
-            }
             
             $dataProvider = new CActiveDataProvider('Products', array(
                 'criteria' => array(
@@ -28,10 +41,6 @@ class ProductsController extends CController
         
         public function actionAll(){
             
-            if (Yii::app()->user->GetId()==NULL){
-                $this->redirect('/profile/login');
-            }
-            
             $dataProvider = new CActiveDataProvider('Products', array(
                 'criteria' => array(
                     'with' => array('owner'),
@@ -46,4 +55,29 @@ class ProductsController extends CController
             
         }
    
+        public function actionCreate(){
+            
+            $model=new Products;
+                
+            if (isset($_POST['ajax']) && $_POST['ajax'] === 'create-product-form') {
+                echo CActiveForm::validate($model);
+                Yii::app()->end();
+            }
+            
+            if (isset($_POST['Products'])){
+                
+                $model->attributes=$_POST['Products'];
+                $model->created_at=date('Y-m-d',time());
+                $model->owner_id=Yii::app()->user->getId();
+                
+                if ($model->save()){
+                    $this->redirect('/products');
+                    Yii::app()->end();
+                }
+            }
+            
+            $this->layout='small_window';
+            $this->pageTitle='Create New Product';
+            $this->render('form_product',array('model'=>$model));
+        }
 }

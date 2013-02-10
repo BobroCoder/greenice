@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Хост: 127.0.0.1:3306
--- Время создания: Фев 10 2013 г., 23:01
+-- Время создания: Фев 11 2013 г., 00:03
 -- Версия сервера: 5.5.29-log
 -- Версия PHP: 5.4.10
 
@@ -30,11 +30,11 @@ CREATE TABLE IF NOT EXISTS `gi_products` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(100) NOT NULL,
   `price` varchar(20) NOT NULL,
-  `quantity` int(11) NOT NULL,
+  `quantity` int(11) NOT NULL DEFAULT '0',
   `created_at` date NOT NULL,
   `owner_id` int(11) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=5 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=7 ;
 
 --
 -- Дамп данных таблицы `gi_products`
@@ -44,7 +44,9 @@ INSERT INTO `gi_products` (`id`, `name`, `price`, `quantity`, `created_at`, `own
 (1, 'ZTE V970', '$250', 15, '2013-02-10', 1),
 (2, 'Samsung S7562 ', '$309', 7, '2013-02-09', 2),
 (3, 'Samsung S6500 ', '$168', 4, '2013-02-10', 2),
-(4, 'Nokia Lumia 820', '$515', 9, '2013-02-10', 2);
+(4, 'Nokia Lumia 820', '$515', 9, '2013-02-10', 2),
+(5, 'TEST', '$44.2', 0, '2013-02-10', 2),
+(6, 'Samsung I9000', '$1', 90, '2013-02-10', 2);
 
 -- --------------------------------------------------------
 

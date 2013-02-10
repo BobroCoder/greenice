@@ -39,10 +39,10 @@ class Products extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('name, price, quantity, created_at, owner_id', 'required'),
-			array('quantity, owner_id', 'numerical', 'integerOnly'=>true),
+			array('name, price, created_at, owner_id', 'required'),
+			array('quantity, owner_id', 'numerical', 'integerOnly'=>true, 'min'=>0),
 			array('name', 'length', 'max'=>100),
-			array('price', 'length', 'max'=>20),
+			array('price', 'numerical', 'min'=>0),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
 			array('id, name, price, quantity, created_at, owner_id', 'safe', 'on'=>'search'),
@@ -98,4 +98,11 @@ class Products extends CActiveRecord
 			'criteria'=>$criteria,
 		));
 	}
+        
+        public function beforeSave() {
+            
+            $this->price='$'.$this->price;
+            return parent::beforeSave();
+        }
+        
 }

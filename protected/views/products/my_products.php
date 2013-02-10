@@ -1,5 +1,7 @@
 <?php
- echo CHtml::link('Create New Product','/products/create');
+echo CHtml::form('/products/create','post',array('style'=>'margin:0; padding:0;'));
+echo CHtml::submitButton('Create New Product',array('style'=>'padding:7px;'));
+echo CHtml::endForm();
 
 $this->widget('zii.widgets.grid.CGridView', array(
     'dataProvider' => $dataProvider,

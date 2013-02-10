@@ -14,3 +14,263 @@ Stack trace:
 #3 {main}
 REQUEST_URI=/favicon.ico
 ---
+2013/02/10 23:21:59 [error] [php] include(CHTML.php): failed to open stream: No such file or directory (C:\OpenServer\domains\framework\YiiBase.php:421)
+Stack trace:
+#0 C:\OpenServer\domains\greenice.test\protected\views\products\my_products.php(2): spl_autoload_call()
+#1 C:\OpenServer\domains\framework\web\CBaseController.php(126): require()
+#2 C:\OpenServer\domains\framework\web\CBaseController.php(95): ProductsController->renderInternal()
+#3 C:\OpenServer\domains\framework\web\CController.php(869): ProductsController->renderFile()
+#4 C:\OpenServer\domains\framework\web\CController.php(782): ProductsController->renderPartial()
+#5 C:\OpenServer\domains\greenice.test\protected\controllers\ProductsController.php(26): ProductsController->render()
+#6 C:\OpenServer\domains\framework\web\actions\CInlineAction.php(49): ProductsController->actionIndex()
+#7 C:\OpenServer\domains\framework\web\CController.php(308): CInlineAction->runWithParams()
+#8 C:\OpenServer\domains\framework\web\CController.php(286): ProductsController->runAction()
+#9 C:\OpenServer\domains\framework\web\CController.php(265): ProductsController->runActionWithFilters()
+#10 C:\OpenServer\domains\framework\web\CWebApplication.php(282): ProductsController->run()
+#11 C:\OpenServer\domains\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#12 C:\OpenServer\domains\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#13 C:\OpenServer\domains\greenice.test\index.php(11): CWebApplication->run()
+REQUEST_URI=/
+2013/02/10 23:21:59 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\OpenServer\domains\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\OpenServer\domains\framework\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 C:\OpenServer\domains\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\OpenServer\domains\greenice.test\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/02/10 23:22:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\OpenServer\domains\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\OpenServer\domains\framework\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 C:\OpenServer\domains\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\OpenServer\domains\greenice.test\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/02/10 23:23:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\OpenServer\domains\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\OpenServer\domains\framework\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 C:\OpenServer\domains\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\OpenServer\domains\greenice.test\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/02/10 23:23:24 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\OpenServer\domains\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\OpenServer\domains\framework\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 C:\OpenServer\domains\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\OpenServer\domains\greenice.test\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/02/10 23:23:27 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "create".' in C:\OpenServer\domains\framework\web\CController.php:483
+Stack trace:
+#0 C:\OpenServer\domains\framework\web\CController.php(270): CController->missingAction('create')
+#1 C:\OpenServer\domains\framework\web\CWebApplication.php(282): CController->run('create')
+#2 C:\OpenServer\domains\framework\web\CWebApplication.php(141): CWebApplication->runController('products/create')
+#3 C:\OpenServer\domains\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 C:\OpenServer\domains\greenice.test\index.php(11): CApplication->run()
+#5 {main}
+REQUEST_URI=/products/create
+HTTP_REFERER=http://greenice.test/
+---
+2013/02/10 23:23:27 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\OpenServer\domains\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\OpenServer\domains\framework\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 C:\OpenServer\domains\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\OpenServer\domains\greenice.test\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/02/10 23:23:30 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\OpenServer\domains\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\OpenServer\domains\framework\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 C:\OpenServer\domains\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\OpenServer\domains\greenice.test\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/02/10 23:23:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\OpenServer\domains\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\OpenServer\domains\framework\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 C:\OpenServer\domains\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\OpenServer\domains\greenice.test\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/02/10 23:25:09 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\OpenServer\domains\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\OpenServer\domains\framework\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 C:\OpenServer\domains\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\OpenServer\domains\greenice.test\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/02/10 23:30:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\OpenServer\domains\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\OpenServer\domains\framework\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 C:\OpenServer\domains\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\OpenServer\domains\greenice.test\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/02/10 23:31:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\OpenServer\domains\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\OpenServer\domains\framework\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 C:\OpenServer\domains\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\OpenServer\domains\greenice.test\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/02/10 23:35:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\OpenServer\domains\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\OpenServer\domains\framework\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 C:\OpenServer\domains\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\OpenServer\domains\greenice.test\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/02/10 23:38:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\OpenServer\domains\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\OpenServer\domains\framework\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 C:\OpenServer\domains\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\OpenServer\domains\greenice.test\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/02/10 23:39:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\OpenServer\domains\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\OpenServer\domains\framework\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 C:\OpenServer\domains\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\OpenServer\domains\greenice.test\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/02/10 23:40:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\OpenServer\domains\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\OpenServer\domains\framework\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 C:\OpenServer\domains\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\OpenServer\domains\greenice.test\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/02/10 23:42:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\OpenServer\domains\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\OpenServer\domains\framework\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 C:\OpenServer\domains\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\OpenServer\domains\greenice.test\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/02/10 23:44:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\OpenServer\domains\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\OpenServer\domains\framework\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 C:\OpenServer\domains\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\OpenServer\domains\greenice.test\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/02/10 23:46:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\OpenServer\domains\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\OpenServer\domains\framework\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 C:\OpenServer\domains\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\OpenServer\domains\greenice.test\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/02/10 23:48:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\OpenServer\domains\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\OpenServer\domains\framework\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 C:\OpenServer\domains\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\OpenServer\domains\greenice.test\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/02/10 23:49:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\OpenServer\domains\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\OpenServer\domains\framework\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 C:\OpenServer\domains\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\OpenServer\domains\greenice.test\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/02/10 23:50:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\OpenServer\domains\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\OpenServer\domains\framework\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 C:\OpenServer\domains\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\OpenServer\domains\greenice.test\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/02/10 23:50:16 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\OpenServer\domains\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\OpenServer\domains\framework\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 C:\OpenServer\domains\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\OpenServer\domains\greenice.test\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/02/10 23:50:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\OpenServer\domains\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\OpenServer\domains\framework\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 C:\OpenServer\domains\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\OpenServer\domains\greenice.test\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/02/10 23:50:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\OpenServer\domains\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\OpenServer\domains\framework\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 C:\OpenServer\domains\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\OpenServer\domains\greenice.test\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/02/10 23:51:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\OpenServer\domains\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\OpenServer\domains\framework\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 C:\OpenServer\domains\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\OpenServer\domains\greenice.test\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/02/10 23:51:35 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\OpenServer\domains\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\OpenServer\domains\framework\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 C:\OpenServer\domains\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\OpenServer\domains\greenice.test\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/02/10 23:53:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\OpenServer\domains\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\OpenServer\domains\framework\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 C:\OpenServer\domains\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\OpenServer\domains\greenice.test\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/02/10 23:53:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\OpenServer\domains\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\OpenServer\domains\framework\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 C:\OpenServer\domains\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\OpenServer\domains\greenice.test\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/02/11 00:01:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\OpenServer\domains\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\OpenServer\domains\framework\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 C:\OpenServer\domains\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\OpenServer\domains\greenice.test\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/02/11 00:01:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\OpenServer\domains\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\OpenServer\domains\framework\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 C:\OpenServer\domains\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\OpenServer\domains\greenice.test\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---

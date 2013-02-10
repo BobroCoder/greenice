@@ -45,6 +45,11 @@ return array(
                     'itemTable'=>'users',
                 ),
             
+                'user'=>array(
+                    // this is actually the default value
+                    'loginUrl'=>array('/profile/login'),
+                ),
+            
 		'urlManager'=>array(
 			'urlFormat'=>'path',
 			'showScriptName'=>false,

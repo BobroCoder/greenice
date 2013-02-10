@@ -24,16 +24,5 @@
         <td colspan="2" style="text-align: right;"><?php echo CHtml::link('Registration','/profile/register') ?></td>
     </tr>
 
-		
-		
-
-
-
-		
-		
-
-
-		
-
 </table>
 <?php $this->endWidget(); ?>
