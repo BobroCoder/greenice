@@ -24,7 +24,7 @@ $this->widget('zii.widgets.grid.CGridView', array(
         'price',
         'quantity',
         'created_at',
-        array( 'name'=>'owner_id', 'type'=>'raw', 'value'=>'CHtml::link("Delete","/products/delete/?pid=$data->id",array("confirm" => "Really remove the product \"$data->name\"?")) '),
+        array( 'name'=>'owner_id', 'type'=>'raw', 'value'=>'CHtml::link("Edit","/products/edit/?pid=$data->id")."  ". CHtml::link("Delete","/products/delete/?pid=$data->id",array("confirm" => "Really remove the product \"$data->name\"?"))'),
     ),
 ));
 ?>

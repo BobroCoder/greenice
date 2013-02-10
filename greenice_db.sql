@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Хост: 127.0.0.1:3306
--- Время создания: Фев 11 2013 г., 00:03
+-- Время создания: Фев 11 2013 г., 01:34
 -- Версия сервера: 5.5.29-log
 -- Версия PHP: 5.4.10
 
@@ -34,7 +34,7 @@ CREATE TABLE IF NOT EXISTS `gi_products` (
   `created_at` date NOT NULL,
   `owner_id` int(11) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=7 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=9 ;
 
 --
 -- Дамп данных таблицы `gi_products`
@@ -44,9 +44,7 @@ INSERT INTO `gi_products` (`id`, `name`, `price`, `quantity`, `created_at`, `own
 (1, 'ZTE V970', '$250', 15, '2013-02-10', 1),
 (2, 'Samsung S7562 ', '$309', 7, '2013-02-09', 2),
 (3, 'Samsung S6500 ', '$168', 4, '2013-02-10', 2),
-(4, 'Nokia Lumia 820', '$515', 9, '2013-02-10', 2),
-(5, 'TEST', '$44.2', 0, '2013-02-10', 2),
-(6, 'Samsung I9000', '$1', 90, '2013-02-10', 2);
+(4, 'Nokia Lumia 820', '$515', 9, '2013-02-10', 2);
 
 -- --------------------------------------------------------
 
@@ -68,7 +66,7 @@ CREATE TABLE IF NOT EXISTS `gi_users` (
 
 INSERT INTO `gi_users` (`id`, `email`, `password`) VALUES
 (1, 'admin@admin.com', 'e10adc3949ba59abbe56e057f20f883e'),
-(2, 'dancer12@qip.ru', 'e4a2979efe1fd2db0678e910a27751ec');
+(2, 'example@example.com', '5f4dcc3b5aa765d61d8327deb882cf99');
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
