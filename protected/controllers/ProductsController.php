@@ -25,6 +25,7 @@ class ProductsController extends CController
             
             $dataProvider = new CActiveDataProvider('Products', array(
                 'criteria' => array(
+                    'condition'=> 'owner_id='.Yii::app()->user->getId(),
                     'with' => array('owner'),
                 ),
                 'sort'=>array(
