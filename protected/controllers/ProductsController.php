@@ -80,4 +80,39 @@ class ProductsController extends CController
             $this->pageTitle='Create New Product';
             $this->render('form_product',array('model'=>$model));
         }
+        
+        public function actionDelete(){
+            
+            if (isset($_GET['pid'])){
+                $product_delete_error=NULL;
+                $product= Products::model()->findByPk((int)$_GET['pid']);
+                
+                /*
+                 * @todo Migrate to Yii Errors engine
+                 */
+                
+                if ($product==NULL){
+                    $product_delete_error='Product with ID='.(int)$_GET['pid'].' does not exist!';
+                }
+                if ($product->owner_id!=Yii::app()->user->getId()){
+                    $product_delete_error='Product with ID='.(int)$_GET['pid'].' does not belong to you!';
+                }
+                
+                if ($product_delete_error!=NULL){
+                    $this->layout='small_window';
+                    $this->pageTitle='Delete Product';
+                    $this->render('product_delete_error',array('product_delete_error'=>$product_delete_error));
+                }else{
+                    
+                    if($product->delete()) $this->redirect ('/products');
+                    
+                }
+                
+                
+                
+            }else{
+                $this->redirect('/products');
+            }
+            
+        }
 }
