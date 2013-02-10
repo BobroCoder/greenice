@@ -1,0 +1,118 @@
+.grid-view-loading
+{
+	background:url(../img/gridview/loading.gif) no-repeat;
+}
+
+.grid-view
+{
+	padding: 25px 0;
+}
+
+.grid-view table.items
+{
+	background: #FCFCFC;
+	border-collapse: collapse;
+	width: 100%;
+	border: 1px #529EC6 solid;
+}
+
+.grid-view table.items th, .grid-view table.items td
+{
+        text-align: center;
+	font-size: 0.9em;
+	border: 1px #529EC6 solid;
+	padding: 0.3em;
+}
+
+.grid-view table.items th
+{
+        background: #D6D6D6;
+	color: #555;
+	text-align: center;
+}
+
+.grid-view table.items th a
+{
+	color: #555;
+	font-weight: bold;
+	text-decoration: none;
+        background:url(../img/gridview/down.gif) right center no-repeat;
+	padding-right: 12px;
+}
+
+.grid-view table.items th a:hover
+{
+	color: #000;
+}
+
+.grid-view table.items th a.asc
+{
+	background:url(../img/gridview/up.gif) right center no-repeat;
+	padding-right: 12px;
+}
+
+.grid-view table.items th a.desc
+{
+	background:url(../img/gridview/down.gif) right center no-repeat;
+	padding-right: 12px;
+}
+
+.grid-view table.items tr.selected
+{
+	background: #74c6e7;
+}
+
+.grid-view table.items tr:hover.selected
+{
+	background: #66a8ff;
+}
+
+.grid-view table.items tbody tr:hover
+{
+	background: #d4e8fb;
+}
+
+.grid-view .link-column img
+{
+	border: 0;
+}
+
+.grid-view .button-column
+{
+	text-align: center;
+	width: 60px;
+}
+
+.grid-view .button-column img
+{
+	border: 0;
+}
+
+.grid-view .checkbox-column
+{
+	width: 15px;
+}
+
+.grid-view .summary
+{
+	margin: 0 0 5px 0;
+	text-align: right;
+}
+
+.grid-view .pager
+{
+	margin: 5px 0 0 0;
+	text-align: right;
+}
+
+.grid-view .empty
+{
+	font-style: italic;
+}
+
+.grid-view .filters input,
+.grid-view .filters select
+{
+	width: 100%;
+	border: 1px solid #ccc;
+}
